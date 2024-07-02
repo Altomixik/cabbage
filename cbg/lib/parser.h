@@ -1,16 +1,13 @@
-#ifndef PARSER_H
-#define PARSER_H
+#ifndef _PARSER_H
+#define _PARSER_H
 
-
-struct Node {
-    char* word;
-    struct Node* next;
+struct Section {
+    char* title;
+    char** statements;
 };
 
-typedef struct Node Node;
+typedef struct Section Section;
 
-Node* strToNode(char* str, char* delims);
-void freeNode(Node* head);
-
+Section* getSections(char* code, int* returnSize);
 
 #endif
