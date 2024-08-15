@@ -9,9 +9,7 @@ struct Node {
 
 typedef struct Node Node;
 
-Node* strToNode(char* str, char* delims);
-char** nodeToArray(Node* head, int* returnSize);
-char** strToArray(char* str, char* delims,  int* returnSize);
+char** splitStr(char* str, char* delims, int* returnSize);
 void freeNode(Node* head);
 void freeStrArray(char** array, size_t arraySize);
 #endif
